@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build:                           # 构建自定义镜像
+      context: .                   # 指定Dockerfile文件所在路径
+      dockerfile: Dockerfile         # 指定Dockerfile文件名称
+    image: fastjson:1.2.24_forDebug
+    container_name: fastjson_1.2.24forDebug
+    ports:
+    - "8090:8090"
+    - "5005:5005"
