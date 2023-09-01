@@ -17,4 +17,4 @@ COPY --from=builder /usr/src/target/shirodemo-1.0-SNAPSHOT.jar /shirodemo-1.0-SN
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005", "/shirodemo-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/shirodemo-1.0-SNAPSHOT.jar"]
